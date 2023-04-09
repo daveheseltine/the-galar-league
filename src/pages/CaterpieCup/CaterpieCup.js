@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from "react";
+import Modal from 'react-bootstrap/Modal';
 import CaterpieData from "../../save/CaterpieCup.js"
 import Number from "../../components/Tables/Number.js"
 import Pokemon from "../../components/Tables/Pokemon.js"
@@ -7,17 +9,32 @@ let caterpieImg = require("../../assets/Pokemon/caterpie.gif");
 
 
 function CaterpieCup () {
-  let CaterpieArray = CaterpieData;
-  let content = [];
+  const [modal, setModal] = useState({
+    show: false
+  });
 
-  CaterpieArray.forEach((data, index) => {
+  const handleModal = (input) => {
+    let imgSrc = require("../../assets/img/" + input + ".png");
+  
+    setModal({
+      show: true,
+      image: <img src={imgSrc} style={{width: "100%"}}/>
+    })
+  }
+
+
+  let content = [];
+  CaterpieData.sort((a, b) => (b.champion) - (a.champion) || (b.hallOfFame) - (a.hallOfFame) || (b.badges.length) - (a.badges.length));
+  CaterpieData.forEach((data, index) => {
     content.push(
       <tr key={index} className="d-flex">
         <Number row={index}/>
         <td className="col-xl-1 col-2">{data.playerName}</td>
         <Pokemon pokemon={data.pokemon}/>
         {/* text center: */}
-        <td className="col-1 text-center">[#]</td>
+        <td className="col-1 d-flex justify-content-center align-content-start mt-1 p-0">
+          <i type="button" className="bi bi-card-list" onClick={() => handleModal(data.id)} alt="Hall of Fame" style={{fontSize: "22px"}}></i>
+        </td>
         <Badges badges={data.badges} hallOfFame={data.hallOfFame}/>
       </tr>
     )
@@ -51,6 +68,12 @@ function CaterpieCup () {
             {content}
           </tbody>
         </table>
+      </div>
+
+      <div>
+        <Modal size="xl" show={modal.show} onHide={() => setModal({show: false})} centered>
+          {modal.image}
+        </Modal>
       </div>
     </div>
   );
