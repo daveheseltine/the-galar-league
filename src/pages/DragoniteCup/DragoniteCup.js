@@ -7,10 +7,9 @@ let dragoniteImg = require("../../assets/Pokemon/dragonite.gif");
 
 
 function DragoniteCup () {
-  let DragoniteArray = DragoniteData;
   let content = [];
-
-  DragoniteArray.forEach((data, index) => {
+  DragoniteData.sort((a, b) => (b.champion) - (a.champion) || (b.hallOfFame) - (a.hallOfFame) || (b.badges.length) - (a.badges.length));
+  DragoniteData.forEach((data, index) => {
     content.push(
       <tr key={index} className="d-flex">
         <Number row={index}/>

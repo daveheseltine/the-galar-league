@@ -8,31 +8,29 @@ let pikachuImg = require("../../assets/Pokemon/pikachu-kantocap.gif");
 
 
 function Home () {
-  let DragoniteArray = DragoniteData;
   let DragoniteContent = [];
-
+  DragoniteData.sort((a, b) => (b.champion) - (a.champion) || (b.hallOfFame) - (a.hallOfFame) || (b.badges.length) - (a.badges.length));
   DragoniteContent.push(
     <tr key={0} className="d-flex">
       <Number row={0}/>
-      <td className="col-xl-1 col-2">{DragoniteArray[0].playerName}</td>
-      <Pokemon pokemon={DragoniteArray[0].pokemon}/>
+      <td className="col-xl-1 col-2">{DragoniteData[0].playerName}</td>
+      <Pokemon pokemon={DragoniteData[0].pokemon}/>
       {/* text center: */}
       <td className="col-1 text-center">[#]</td>
-      <Badges badges={DragoniteArray[0].badges} hallOfFame={DragoniteArray[0].hallOfFame}/>
+      <Badges badges={DragoniteData[0].badges} hallOfFame={DragoniteData[0].hallOfFame}/>
     </tr>
   )
 
-  let CaterpieArray = CaterpieData;
   let CaterpieContent = [];
-
+  DragoniteData.sort((a, b) => (b.champion) - (a.champion) || (b.hallOfFame) - (a.hallOfFame) || (b.badges.length) - (a.badges.length));
   CaterpieContent.push(
     <tr key={1} className="d-flex">
       <Number row={0} index={1}/>
-      <td className="col-xl-1 col-2">{CaterpieArray[0].playerName}</td>
-      <Pokemon pokemon={CaterpieArray[0].pokemon}/>
+      <td className="col-xl-1 col-2">{CaterpieData[0].playerName}</td>
+      <Pokemon pokemon={CaterpieData[0].pokemon}/>
       {/* text center: */}
       <td className="col-1 text-center">[#]</td>
-      <Badges badges={CaterpieArray[0].badges} hallOfFame={CaterpieArray[0].hallOfFame}/>
+      <Badges badges={CaterpieData[0].badges} hallOfFame={CaterpieData[0].hallOfFame}/>
     </tr>
   )
 

@@ -7,7 +7,7 @@ function Badges (props) {
   if  (hallOfFame === true) {
     content.push(
       <div key={0} className="col-xl-1 col-sm-2 col-4 d-flex justify-content-center mt-1">
-          <i className="bi bi-stars" alt="Hall of Fame" style={{color: "#a88900", fontSize: "25px"}}></i>
+        <i className="bi bi-stars" alt="Hall of Fame" style={{color: "#a88900", fontSize: "22px"}}></i>
       </div>
     );
   }
