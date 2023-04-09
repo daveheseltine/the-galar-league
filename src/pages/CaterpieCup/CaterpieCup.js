@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Modal from 'react-bootstrap/Modal';
 import CaterpieData from "../../save/CaterpieCup.js"
 import Number from "../../components/Tables/Number.js"
