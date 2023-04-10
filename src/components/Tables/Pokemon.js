@@ -15,7 +15,7 @@ function Pokemon (props) {
   });
 
   return (
-    <td className="col-xl-3 col-4 d-flex flex-wrap align-content-start mt-2 px-3 py-0">
+    <td className="col-xl-3 col-4 d-flex flex-wrap align-content-start px-3 pt-2 pb-0">
       {content}
     </td>
   )

@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 // Pages:
-import Home from "./pages/Home/Home.js"
-import DragoniteCup from "./pages/DragoniteCup/DragoniteCup.js"
-import CaterpieCup from './pages/CaterpieCup/CaterpieCup.js'
-import Rules from './pages/Rules/Rules.js'
+import Home from "./pages/Home.js"
+import DragoniteCup from "./pages/DragoniteCup.js"
+import CaterpieCup from './pages/CaterpieCup.js'
+import Rules from './pages/Rules.js'
 
 // Components:
-import Header from "./components/Header/Header.js"
+import Header from "./components/Header.js"
 
 
 function App() {
