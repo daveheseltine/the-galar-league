@@ -13,11 +13,11 @@ function Header () {
           onClick={() => setDropdown(false)}
         >The Galar League</Link>
 
-        <a className="navbar-toggler p-0" onClick={() => setDropdown(!dropdown)} style={{border: "none", minHeight: "85px"}}>
+        <i className="navbar-toggler p-0" alt="Menu" onClick={() => setDropdown(!dropdown)} style={{minHeight: "85px"}}>
           <div className="d-flex align-items-center" style={{minHeight: "85px"}}>
             <i className="navbar-toggler-icon"></i>
           </div>
-        </a>
+        </i>
 
         <div className={`collapse navbar-collapse justify-content-end ${dropdown ? "show" : ""}`} >
           <ul className="navbar-nav">
