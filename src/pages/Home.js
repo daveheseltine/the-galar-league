@@ -89,7 +89,7 @@ function Home () {
           <div className="d-flex flex-wrap justify-content-center p-1">
             <h1 className="col-12 py-1 display-6 text-center">Deck List</h1>
             {modal.image}
-            <a type="button" className="bi-arrow-down-square-fill" style={{color: "grey", fontSize: "40px"}} href={modal.href} alt="Download" download></a>
+            <a className="bi-arrow-down-square-fill shadow-none" alt="Download" style={{color: "grey", fontSize: "40px"}} href={modal.href} alt="Download" download></a>
           </div>
         </Modal>
       </div>
