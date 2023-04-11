@@ -77,7 +77,7 @@ function DragoniteCup () {
           <div className="d-flex flex-wrap justify-content-center p-1">
             <h1 className="col-12 py-1 display-6 text-center">Deck List</h1>
             {modal.image}
-            <a className="bi-arrow-down-square-fill" alt="Download" style={{color: "grey", fontSize: "40px"}} href={modal.href} download></a>
+            <a className="bi-arrow-down-square-fill" alt="Download" style={{color: "grey", fontSize: "40px"}} href={modal.href} download> </a>
           </div>
         </Modal>
       </div>
