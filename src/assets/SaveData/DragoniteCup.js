@@ -5,9 +5,9 @@ const DragoniteCup = [
     pokemon: ["jumpluff", "cinccino", "zigzagoon-galar", "manaphy"],
     deckList: true,
     badges: [],
-    gymLeader: true,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
     {
     id: "Becky_Fire_Eevee",
@@ -15,9 +15,9 @@ const DragoniteCup = [
     pokemon: ["eevee", "victini", "cinderace", "cinccino"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Becky_Inteleon",
@@ -25,9 +25,9 @@ const DragoniteCup = [
     pokemon: ["inteleon", "frosmoth", "lumineon"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Becky_Sylveon",
@@ -35,9 +35,9 @@ const DragoniteCup = [
     pokemon: ["sylveon", "urshifu-rapid-strike", "eternatus", "octillery", "blaziken", "moltres-galar"],
     deckList: false,
     badges: [],
-    gymLeader: true,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Dave_Gardevoir",
@@ -45,9 +45,9 @@ const DragoniteCup = [
     pokemon: ["gardevoir-mega", "cresselia"],
     deckList: true,
     badges: [],
-    gymLeader: true,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: true
   },
   {
     id: "Alex_Calyrex-S",
@@ -55,9 +55,9 @@ const DragoniteCup = [
     pokemon: ["calyrex-s"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Alex_Calyrex-I",
@@ -65,9 +65,9 @@ const DragoniteCup = [
     pokemon: ["calyrex-i"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Tom_Calyrex-S",
@@ -75,9 +75,9 @@ const DragoniteCup = [
     pokemon: ["calyrex-s"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Tom_Mimikyu",
@@ -85,19 +85,19 @@ const DragoniteCup = [
     pokemon: ["gardevoir", "mimikyu"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Dave_Regis",
     playerName: "Dave",
-    pokemon: ["regidrago", "regieleki", "regigigas", "regice", "regirock", "registeel"],
+    pokemon: [ "regieleki", "regidrago", "regigigas", "regice", "regirock", "registeel"],
     deckList: true,
     badges: [],
-    gymLeader: true,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   }
 ]
 

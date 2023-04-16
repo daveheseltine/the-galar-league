@@ -15,8 +15,8 @@ function Header () {
           to=""
           onClick={() => {setDropdown(false); window.scrollTo(0, 0)}}
         >
-          <img src={logo} alt="Current Champions" height="30px" className="pe-3 my-auto" />
-          <h1 className="my-auto">THE GALAR LEAGUE</h1>
+          <img src={logo} alt="Current Champions" height="40px" className="pe-3 my-auto" />
+          <h1 className="my-auto">TGL</h1>
         </Link>
 
         <i className="navbar-toggler p-0" alt="Menu" onClick={() => setDropdown(!dropdown)} style={{minHeight: "85px"}}>
@@ -27,6 +27,14 @@ function Header () {
 
         <div className={`collapse navbar-collapse justify-content-end ${dropdown ? "show" : ""}`} >
           <ul className="navbar-nav">
+            <li className="nav-item my-auto">
+              <NavLink 
+                to=""
+                className={({isActive}) => isActive ? "nav-link active" : "nav-link"}
+                onClick={() => {setDropdown(false); window.scrollTo(0, 0)}}
+              >Home</NavLink>
+            </li>
+
             <li className="nav-item my-auto" >
               <NavLink 
                 to="/DragoniteCup"
@@ -51,8 +59,8 @@ function Header () {
               >Rules</NavLink>
             </li>
 
-            <div style={{height: "23px"}}>
-            </div>
+            {/* Spacer: */}
+            <div className="mb-2"></div>
           </ul>
         </div>
       </div>

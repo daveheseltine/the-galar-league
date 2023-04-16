@@ -1,7 +1,7 @@
 :root {
-  --bg-nav: rgba(255, 0, 0, 0.4);
-  --bg-main: rgba(245, 245, 245, 0.7);
-  --bg-main-edge: rgb(255, 255, 255);
+  --bg-nav: rgba(200, 0, 0, 0.9);
+  --bg-main: rgba(245, 245, 245, 0.8);
+  --off-white: rgba(240, 235, 230);
 }
 
 /* Font Library: */
@@ -17,13 +17,30 @@
   font-family: PermanentMarker;
   src: url("./assets/fonts/Permanent_Marker/PermanentMarker-Regular.ttf");
 }
+@font-face {
+  font-family: Rubik_Moonrocks;
+  src: url("./assets/fonts/Rubik_Moonrocks/RubikMoonrocks-Regular.ttf");
+}
+@font-face {
+  font-family: Bungee;
+  src: url("./assets/fonts/Bungee/Bungee-Regular.ttf");
+}
 
 * {
-  /* font-family: OpenSans; */
-  /* font-size: 10px; */
+  font-family: OpenSans;
 }
 
 /* Class: */
+
+.interaction {
+  color: grey;
+}
+
+.interaction:hover {
+  color: red;
+  cursor: pointer
+}
+
 .textbox {
   background-color: rgb(255, 255, 255, 0.6);
 }
@@ -38,43 +55,26 @@
 }
 
 .navbar-brand > h1 {
-  font-family: PermanentMarker;
-  font-size: 28px;
+  font-family: Rubik_Moonrocks;
+  font-size: 40px;
 }
 
 .navbar-nav > li {
   font-family: PermanentMarker;
-  /* font-size: 20px; */
 }
 
 /* ID: */
 #wrapper {
-  background: black
+  background: white
 }
 
 #main {
   background: linear-gradient(to bottom,
-    var(--bg-main-edge),
+    var(--off-white),
     var(--bg-main) 75%,
-    black
+    white
   ), url("./assets/img/pokemon-tcg-2023.png");
   background-size: auto 100vh;
   background-position: top center;
   background-repeat: no-repeat;
 }
-
-
-
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */

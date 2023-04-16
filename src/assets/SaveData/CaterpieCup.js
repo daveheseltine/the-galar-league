@@ -5,9 +5,9 @@ const CaterpieCup = [
     pokemon: ["jumpluff", "cinccino", "zigzagoon-galar", "manaphy"],
     deckList: true,
     badges: [],
-    gymLeader: true,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Becky_Lightning_Box",
@@ -15,9 +15,9 @@ const CaterpieCup = [
     pokemon: ["flaaffy", "morpeko", "raichu", "vikavolt", "tapukoko", "dracozolt"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Westy_Rampados",
@@ -25,9 +25,9 @@ const CaterpieCup = [
     pokemon: ["rampardos", "ursaluna", "hitmonchan"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Ryan_Volcarona",
@@ -35,9 +35,9 @@ const CaterpieCup = [
     pokemon: ["volcarona", "tsareena", "cinderace", "reshiram", "druddigon", "larvesta"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Tom_Mewtwo",
@@ -45,9 +45,9 @@ const CaterpieCup = [
     pokemon: ["mewtwo", "lunatone"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Tom_Dragon_Box",
@@ -55,9 +55,9 @@ const CaterpieCup = [
     pokemon: ["salamence", "haxorus", "latios"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
   {
     id: "Becky_Wailord",
@@ -65,9 +65,9 @@ const CaterpieCup = [
     pokemon: ["wailord", "empoleon", "suicune", "lumineon", "cryogonal", "bibarel"],
     deckList: false,
     badges: [],
-    gymLeader: false,
     hallOfFame: false,
-    champion: false
+    champion: false,
+    banned: false
   },
 ]
 

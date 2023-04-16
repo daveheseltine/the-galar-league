@@ -3,7 +3,7 @@ function DeckList (props) {
 
   if (props.deckList === true) {
     content = (
-      <i alt="Champion" className="bi bi-grid-fill" style={{color: "grey", fontSize: "22px"}} onClick={() => props.handleModal(props.id)}></i>
+      <i alt="Champion" className="interaction bi bi-grid-fill" style={{fontSize: "22px"}} onClick={() => props.handleModal(props.id)}></i>
     )
   } else {
     content = ("")

@@ -12,29 +12,29 @@ function Rules () {
         <div id="content" className="d-flex flex-wrap justify-content-center align-content-start">
 
           {/* Head: */}
-          <h1 className="col-12 mb-2 py-5 text-center">The Galar League<span className="align-items-center" style={{fontSize: "15px"}}>&copy;</span> Rules</h1>
+          <h1 className="col-12 mb-1 py-5 text-center">The Galar League<sup>&copy;</sup> Rules</h1>
           {/* Body: */}
-          <div className="col-xl-9 col-12">
+          <div className="col-xl-9 col-12 textbox px-3 pt-2 pb-3">
             {/* The Galar League: */}
-            <div className="textbox mb-4 p-2">
+            <div className="mb-4">
               <p>Your deck must have been legal in the official Standard format at any point from the Sword and Shield Base set onwards (including reprints).</p>
               <p className="m-0">The current options are building your deck using only cards with regulation marks:</p>
-              <ul className="m-0">
+              <ul>
                 <li>"D", "E" and "F"</li>
                 <li>"E", "F" and "G"</li>
               </ul>
             </div>
             {/* The Dragonite Cup: */}
-            <h2 className="px-3">The Dragonite Cup</h2>
-            <div className="textbox mb-4 px-2 p-2">
-              <ul className="m-0">
+            <h2>The Dragonite Cup</h2>
+            <div className="mb-4">
+              <ul>
                 <li>All Pokemon are allowed.</li>
                 <li>Weakness and Resistance are allowed.</li>
               </ul>
             </div>
             {/* The Gaterpie Cup: */}
-            <h2 className="px-3">The Caterpie Cup</h2>
-            <div className="textbox px-2 p-2">
+            <h2>The Caterpie Cup</h2>
+            <div>
               <ul className="m-0">
                 <li>Evolution pokemon with a Rulebox are not allowed.</li>
                 <li>Basic pokemon with a Rulebox are allowed, up to 3 of "V" or "EX" pokemon and 1 "Radiant" pokemon.</li>
