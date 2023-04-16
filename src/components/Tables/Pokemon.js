@@ -3,7 +3,7 @@ function Pokemon (props) {
   let pokemon = props.pokemon;
 
   pokemon.forEach((data, index) => {
-    let img = require("../../assets/Pokemon/" + data + ".gif");
+    let img = require("../../assets/img/pokemon/" + data + ".gif");
 
     content.push(
       <div key={index} className="col-sm-2 col-4 d-flex justify-content-center">

@@ -8,7 +8,7 @@ import DeckList from "../components/Tables/DeckList.js"
 import Badges from "../components/Tables/Badges.js"
 import Footer from "../components/Footer.js"
 
-const pikachuImg = require("../assets/Pokemon/pikachu-kantocap.gif");
+const pikachuImg = require("../assets/img/pokemon/pikachu-kantocap.gif");
 
 
 function Home () {
@@ -51,52 +51,60 @@ function Home () {
   )
 
   return (
-    <div className="d-flex flex-column justify-content-between" id="wrapper" style={{minHeight: "100vh", backgroundColor: "white"}}>
-      <div className="d-flex flex-wrap justify-content-center align-content-start">
+    // Wrapper (Contains: Main > Content, Footer):
+    <div id="wrapper">
 
-        {/* Spacer: */}
-        <div className="col-12" style={{height: "100px"}}></div>
+      {/* Main > Content: */}
+      <div id="main" className="d-flex flex-column" style={{minHeight: "100vh"}}>
+        <div id="spacer" style={{height: "100px"}}></div>
+        <div id="content" className="d-flex flex-wrap justify-content-center align-content-start">
+
+          {/* Head: */}
+          <div className="col-12 py-5">
+            <h1 className="mb-3 text-center">Current Champions</h1>
+            <div className="d-flex justify-content-center mb-1">
+              <img src={pikachuImg} alt="Current Champions" height="100px"/>
+            </div>
+          </div>
+
+          {/* Body: */}
+          {/* Table: */}
+          <div className="col-xl-9 col-12">
+            <table className="table table-borderless table-striped m-0" style={{backgroundColor: "rgb(255, 255, 255, 0.6)"}}>
+              {/* Head: */}
+              <thead>
+                <tr className="d-flex" style={{borderBottom: "solid 3px"}}>
+                  <th className="col-1 px-0 text-center" scope="col">#</th>
+                  <th className="col-xl-1 col-2" scope="col">Player</th>
+                  <th className="col-xl-3 col-4 px-3" scope="col">Deck</th>
+                  <th className="col-1 px-0 text-center" scope="col">List</th>
+                  <th className="col-xl-6 col-4 px-3" scope="col">Badges</th>
+                </tr>
+              </thead>
+              {/* Body: */}
+              <tbody>
+                {DragoniteContent}
+                {CaterpieContent}
+              </tbody>
+            </table>
+          </div>
         
-        <div className="col-12 py-4">
-          <h1 className="text-center">Current Champions</h1>
-          <div className="d-flex justify-content-center">
-            <img src={pikachuImg} alt="Current Champions" height="50px"/>
-          </div>
         </div>
-
-        {/* Table */}
-        <div className="col-xl-9 col-12 px-0">
-          <table className="table table-hover">
-            {/* Head: */}
-            <thead>
-              <tr className="d-flex" style={{borderBottom: "solid 3px"}}>
-                <th className="col-1 px-0 text-center" scope="col">#</th>
-                <th className="col-xl-1 col-2" scope="col">Player</th>
-                <th className="col-xl-3 col-4 px-3" scope="col">Deck</th>
-                <th className="col-1 px-0 text-center" scope="col">List</th>
-                <th className="col-xl-6 col-4 px-3" scope="col">Badges</th>
-              </tr>
-            </thead>
-            {/* Body: */}
-            <tbody>
-              {DragoniteContent}
-              {CaterpieContent}
-            </tbody>
-          </table>
-        </div>
-
-        <Modal className="d-flex flex-wrap" size="xl" show={modal.show} onHide={() => setModal({show: false})} centered>
-          <div className="d-flex flex-wrap justify-content-center p-1">
-            <h1 className="col-12 py-1 display-6 text-center">Deck List</h1>
-            {modal.image}
-            <a className="bi-arrow-down-square-fill shadow-none" alt="Download" style={{color: "grey", fontSize: "40px"}} href={modal.href} download> </a>
-          </div>
-        </Modal>
       </div>
 
+      {/* Modal: */}
+      <Modal className="d-flex flex-wrap" size="xl" show={modal.show} onHide={() => setModal({show: false})} centered>
+        <div className="d-flex flex-wrap justify-content-center p-1">
+          <h1 className="col-12 py-1 display-6 text-center">Deck List</h1>
+          {modal.image}
+          <a className="bi-arrow-down-square-fill shadow-none" alt="Download" style={{color: "grey", fontSize: "40px"}} href={modal.href} download> </a>
+        </div>
+      </Modal>
+
+      {/* Footer: */}
       <Footer />
     </div>
-  );
+  )
 }
 
 
