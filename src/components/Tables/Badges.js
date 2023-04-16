@@ -1,23 +1,23 @@
 function Badges (props) {
   let content = [];
   let hallOfFame = props.hallOfFame;
-  let gymLeader = props.gymLeader;
   let badges = props.badges;
+  let banned = props.banned;
 
-  // Hall of Fame:
-  if  (hallOfFame === true) {
+  // Gym Leader:
+  if  (banned === true) {
     content.push(
       <div key={0} className="col-xl-1 col-sm-2 col-4 d-flex justify-content-start">
-        <i className="bi bi-award-fill" alt="Hall of Fame" style={{color: "#a88900", fontSize: "18px"}}></i>
+        <i className="bi bi-exclamation-diamond-fill" alt="Banned" title="Banned" style={{color: "grey", fontSize: "18px"}}></i>
       </div>
     );
   }
 
-  // Gym Leader:
-  if  (gymLeader === true) {
+  // Hall of Fame:
+  if  (hallOfFame === true) {
     content.push(
       <div key={1} className="col-xl-1 col-sm-2 col-4 d-flex justify-content-start">
-        <i className="bi bi-award-fill" alt="Hall of Fame" style={{color: "grey", fontSize: "18px"}}></i>
+        <i className="bi bi-award-fill" alt="Hall of Fame" title="Hall of Fame" style={{color: "#a88900", fontSize: "18px"}}></i>
       </div>
     );
   }

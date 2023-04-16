@@ -27,26 +27,26 @@ function Home () {
   }
 
   let DragoniteContent = [];
-  DragoniteData.sort((a, b) => (b.champion) - (a.champion) || (b.hallOfFame) - (a.hallOfFame) || (b.badges.length) - (a.badges.length));
+  DragoniteData.sort((a, b) => (b.champion) - (a.champion) || (b.banned + b.hallOfFame) - (a.banned + a.hallOfFame) || (b.badges.length) - (a.badges.length));
   DragoniteContent.push(
     <tr key={0} className="d-flex">
       <Number row={0} />
       <td className="col-xl-1 col-2">{DragoniteData[0].playerName}</td>
       <Pokemon pokemon={DragoniteData[0].pokemon} />
       <DeckList deckList={DragoniteData[0].deckList} id={DragoniteData[0].id} handleModal={handleModal} />
-      <Badges hallOfFame={DragoniteData[0].hallOfFame} gymLeader={DragoniteData[0].gymLeader} badges={DragoniteData[0].badges} />
+      <Badges hallOfFame={DragoniteData[0].hallOfFame} banned={DragoniteData[0].banned} badges={DragoniteData[0].badges} />
     </tr>
   )
 
   let CaterpieContent = [];
-  DragoniteData.sort((a, b) => (b.champion) - (a.champion) || (b.hallOfFame) - (a.hallOfFame) || (b.badges.length) - (a.badges.length));
+  DragoniteData.sort((a, b) => (b.champion) - (a.champion) || (b.banned + b.hallOfFame) - (a.banned + a.hallOfFame) || (b.badges.length) - (a.badges.length));
   CaterpieContent.push(
     <tr key={1} className="d-flex">
       <Number row={0} index={1} />
       <td className="col-xl-1 col-2">{CaterpieData[0].playerName}</td>
       <Pokemon pokemon={CaterpieData[0].pokemon} />
       <DeckList deckList={CaterpieData[0].deckList} id={CaterpieData[0].id} handleModal={handleModal} />
-      <Badges hallOfFame={CaterpieData[0].hallOfFame} gymLeader={CaterpieData[0].gymLeader} badges={CaterpieData[0].badges} />
+      <Badges hallOfFame={CaterpieData[0].hallOfFame} banned={CaterpieData[0].banned} badges={CaterpieData[0].badges} />
     </tr>
   )
 
@@ -60,10 +60,10 @@ function Home () {
         <div id="content" className="d-flex flex-wrap justify-content-center align-content-start">
 
           {/* Head: */}
-          <div className="col-12 py-5">
-            <h1 className="mb-3 text-center">Current Champions</h1>
+          <div className="col-12 py-4">
+            <h1 className="mb-2 text-center">Current Champions</h1>
             <div className="d-flex justify-content-center mb-1">
-              <img src={pikachuImg} alt="Current Champions" height="100px"/>
+              <img src={pikachuImg} alt="Current Champions" height="60px"/>
             </div>
           </div>
 
@@ -97,7 +97,7 @@ function Home () {
         <div className="d-flex flex-wrap justify-content-center p-1">
           <h1 className="col-12 py-1 display-6 text-center">Deck List</h1>
           {modal.image}
-          <a className="bi-arrow-down-square-fill shadow-none" alt="Download" style={{color: "grey", fontSize: "40px"}} href={modal.href} download> </a>
+          <a className="interaction bi-arrow-down-square-fill shadow-none" alt="Download" style={{fontSize: "40px"}} href={modal.href} download> </a>
         </div>
       </Modal>
 

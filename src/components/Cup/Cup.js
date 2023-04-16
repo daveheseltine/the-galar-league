@@ -29,7 +29,7 @@ function Cup (props) {
 
   let content = [];
   let SaveData = props.data;
-  SaveData.sort((a, b) => (b.champion) - (a.champion) || (b.hallOfFame) - (a.hallOfFame) || (b.gymLeader + b.badges.length) - (a.gymLeader + a.badges.length));
+  SaveData.sort((a, b) => (b.champion) - (a.champion) || (b.banned + b.hallOfFame) - (a.banned + a.hallOfFame) || (b.badges.length) - (a.badges.length));
   SaveData.forEach((data, index) => {
     content.push(
       <tr key={index} className="d-flex">
@@ -37,7 +37,7 @@ function Cup (props) {
         <td className="col-xl-1 col-2">{data.playerName}</td>
         <Pokemon pokemon={data.pokemon} />
         <DeckList deckList={data.deckList} id={data.id} handleModal={handleModal} />
-        <Badges hallOfFame={data.hallOfFame} gymLeader={data.gymLeader} badges={data.badges} />
+        <Badges hallOfFame={data.hallOfFame} banned={data.banned} badges={data.badges} />
       </tr>
     )
   })
@@ -52,10 +52,10 @@ function Cup (props) {
         <div id="content" className="d-flex flex-wrap justify-content-center align-content-start">
 
           {/* Head: */}
-          <div className="col-12 py-5">
-            <h1 className="mb-3 text-center">The {mascotAbc} Cup</h1>
+          <div className="col-12 py-4">
+            <h1 className="mb-2 text-center">The {mascotAbc} Cup</h1>
             <div className="d-flex justify-content-center mb-1">
-              <img src={mascotImg} alt={`The ${mascotAbc} Cup`} height="100px"/>
+              <img src={mascotImg} alt={`The ${mascotAbc} Cup`} height="60px"/>
             </div>
           </div>
 
@@ -88,7 +88,7 @@ function Cup (props) {
         <div className="d-flex flex-wrap justify-content-center p-1">
           <h1 className="col-12 py-1 display-6 text-center">Deck List</h1>
           {modal.image}
-          <a className="bi-arrow-down-square-fill" alt="Download" style={{color: "grey", fontSize: "40px"}} href={modal.href} download> </a>
+          <a className="interaction bi-arrow-down-square-fill" alt="Download" style={{fontSize: "40px"}} href={modal.href} download> </a>
         </div>
       </Modal>
 
