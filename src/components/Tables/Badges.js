@@ -24,7 +24,7 @@ function Badges (props) {
 
   // Badges:
   badges.forEach((data, index) => {
-    let img = require("../../assets/Pokemon/" + data + ".gif");
+    let img = require("../../assets/img/pokemon/" + data + ".gif");
 
     content.push(
       <div key={index+2} className="col-xl-1 col-sm-2 col-4 d-flex justify-content-center">
